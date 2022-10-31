@@ -11,6 +11,7 @@ public class InsertionSort {
         }
     }
 
+    // Iterative:
     private static int[] insertionSort(int[] unsorted) {
         int help;
         for(int i=0; i < unsorted.length; i++) {

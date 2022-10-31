@@ -9,6 +9,7 @@ class BubbleSort {
         }
     }
 
+    // Recursive:
     public static int[] bubbleSort(int[] array) {
         int help;   // Wird benötigt beim Vertauschen der Indizies!
         for(int i=0; i < array.length - 1; i++) {
