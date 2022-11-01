@@ -1,44 +1,41 @@
-package Algorithmen.Praktikum_1;
+package Java.Algorithmen.Praktikum_1;
 
 public class Quicksort_reserved {
     public static void main(String[] args) {
         int[] arr = {40, 20, 7, 80, 60, 50, 10, 30, 17, 42};
         printArray(arr);
-        quicksortReversed(arr, 0, arr.length-1);
+        quicksort(arr, 0, arr.length-1);
         System.out.println("--------------------------------------------------------");
         printArray(arr);
     }
 
-    private static void quicksortReversed(int[] arr, int lowIndex, int highIndex) {
+    private static void quicksort(int[] arr, int lowIndex, int highIndex) {
+
         // Rekursionsanker:
-        if(lowIndex >= highIndex) {
+        if(lowIndex >= highIndex)
             return;
-        }
 
-        // Festlegen eines Pivots:
-        int pivot = arr[lowIndex];
-
-        // Pointer:
+        // Festlegen des Pivots:
+        int pivot = arr[highIndex];
+        // Pointer erzeugen:
         int leftPointer = lowIndex;
         int rightPointer = highIndex;
 
-        // Schleife:
         while (leftPointer < rightPointer) {
 
-            while(arr[leftPointer] >= pivot && leftPointer < rightPointer) {
+            while(arr[leftPointer] >= pivot && leftPointer < rightPointer) {    // Vertausche das >= Zeichen um die Reihenfolge zu drehen!
                 leftPointer++;   
             }
-            while(arr[rightPointer] <= pivot && leftPointer < rightPointer) {
+            while(arr[rightPointer] <= pivot && leftPointer < rightPointer) {   // Vertausche das <= Zeichen um die Reihenfolge zu drehen!
                 rightPointer--;
             }
-            swap(arr, rightPointer, leftPointer);
+            swap(arr, leftPointer, rightPointer);
         }
-        swap(arr, lowIndex, rightPointer);
+        swap(arr, leftPointer, highIndex);
 
         // Rekursiveraufruf:
-        quicksortReversed(arr, lowIndex, leftPointer - 1);
-        quicksortReversed(arr, leftPointer + 1, highIndex);
-
+        quicksort(arr, lowIndex, leftPointer - 1);
+        quicksort(arr, leftPointer + 1, highIndex);
     }
 
     // Swap-Methode:
