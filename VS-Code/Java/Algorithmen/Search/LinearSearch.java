@@ -1,3 +1,5 @@
+package Java.Algorithmen.Search;
+
 public class LinearSearch {
     public static void main(String[] args) {
         int[] arr = {1,2,3,9,8,7,4,6,5};
