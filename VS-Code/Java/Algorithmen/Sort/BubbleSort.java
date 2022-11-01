@@ -4,7 +4,15 @@ class BubbleSort {
     public static void main(String[] args) {
         int[] array = {1,3,2,5,7,9,8,4,6,0};
         int[] sortArray = bubbleSort(array);
+        
         for(int e : sortArray) {
+            System.out.println("" + e);
+        }
+        
+        System.out.println("---------------------------");
+
+        int[] sortedIterativ = bubbleSortI(array);
+        for(int e : sortedIterativ) {
             System.out.println("" + e);
         }
     }
@@ -25,6 +33,27 @@ class BubbleSort {
             bubbleSort(array);
         }
         return array;
+    }
+
+    // Itterativ: // Ist bisschen komisch aber funktioniert, würde es aber in der Form nicht verwenden!
+    public static int[] bubbleSortI(int[] arr) {
+        int help;
+        int i=0;
+        while(arr[i] < arr[i+1]) {
+            if(i == arr.length-2) {
+                break;
+            }
+            if(arr[i] < arr[i+1]) {
+                help = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = help;
+            }
+            help = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = help;
+            i++;
+        }
+        return arr;
     }
 
    
