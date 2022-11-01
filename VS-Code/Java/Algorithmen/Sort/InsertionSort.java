@@ -1,14 +1,14 @@
 package Java.Algorithmen.Sort;
 
+import Java.Algorithmen.Help.HelpMethods;
+
 public class InsertionSort {
     public static void main(String[] args) {
         // 
         int[] unsorted = {4, 1, 8, -3, 5, 7};
         int[] sorted = insertionSort(unsorted);
 
-        for(int i : sorted) {
-            System.out.println(i);
-        }
+        HelpMethods.printArray(sorted);
     }
 
     // Iterative:
@@ -23,7 +23,6 @@ public class InsertionSort {
                 j--;
             }
             unsorted[j] = help;
-
         }
         return unsorted;
     }    
