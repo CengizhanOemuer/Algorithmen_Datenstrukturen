@@ -1,9 +1,9 @@
-package Java.Datenstrukturen;
+package Java.Datenstrukturen.Vorlesungsskript.Arraybasierend;
 
-public class StackMain {
+public class ArrayBasierendeTests {
     public static void main(String[] args) {
         // Ein Objekt der Klasse MyStack erzeugen:
-        MyStack stack = new MyStack(10);
+        StackArray stack = new StackArray(10);
         // Methoden von MyStack testen:
         stack.push(10);
         stack.push(20);
