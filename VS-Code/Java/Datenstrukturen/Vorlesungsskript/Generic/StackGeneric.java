@@ -6,7 +6,7 @@ public class StackGeneric<T> {
 
     // Pop_Methode fügt ein Knotenelement dem Stack hinzu:
     public StackGeneric<T> push(T element) {
-        topKnoten = new KnotenGeneric(element, topKnoten);
+        topKnoten = new KnotenGeneric<T>(element, topKnoten);
         return this;
     }
 
