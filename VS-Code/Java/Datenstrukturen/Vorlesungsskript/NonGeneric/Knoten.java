@@ -1,4 +1,4 @@
-package Java.Datenstrukturen.Vorlesungsskript;
+package Java.Datenstrukturen.Vorlesungsskript.NonGeneric;
 
 public class Knoten {
     // Attribute:
