@@ -19,7 +19,7 @@ public class KnotenGeneric<T> {
     }
 
     // Gibt das Knotenelement zurück:
-    public T getKnoten() {
+    public T getElement() {
         return object;
     }
 
