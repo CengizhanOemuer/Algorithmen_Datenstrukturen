@@ -19,7 +19,7 @@ public class Knoten {
     }
 
     // Gibt den Knoten zurück:
-    public Object getKnoten() {
+    public Object getElement() {
         return object;
     }
 
